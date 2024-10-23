@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Conversion</title>
+
+    <!-- Icon link-->
+    <link rel="shortcut Icon" href="./assets/tempConversionLogo.webp" />
+
+    <!-- CSS link-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/tempConversionLogo.webp" alt="" />
+      <h2>TEMPERATURE CONVERSION</h2>
+      <img src="./assets/tempConversionLogo.webp" alt="" />
+    </header>
+
+    <div class="tempConversionContainer">
+      <h1>Temperature Conversion:</h1>
+      <input type="number" id="inputTemp" required />
+      <button id="submitButton" onclick="convertedTemp()">Convert</button><br />
+      <p>
+        (Click the 'Convert' button every time you want to convert.)
+      </p>
+
+      <!--User Units of temperature-->
+      <div class="containerUserTemp">
+        <h2>FROM:</h2>
+        <ul>
+          <!--Celsius-->
+          <li>
+            <input type="radio" id="celsius" name="temperatures" />
+            <label for="celsius">Celsius (°C)</label>
+          </li>
+          <!--Fahrenheit-->
+          <li>
+            <input type="radio" id="fahrenheit" name="temperatures" />
+            <label for="fahrenheit">Fahrenheit (°F)</label>
+          </li>
+          <!--Kelvin-->
+          <li>
+            <input type="radio" id="kelvin" name="temperatures" />
+            <label for="kelvin">Kelvin (K)</label>
+          </li>
+          <!--Rankine-->
+          <li>
+            <input type="radio" id="rankine" name="temperatures" />
+            <label for="rankine">Rankine (°R)</label>
+          </li>
+          <!--Reaumur-->
+          <li>
+            <input type="radio" id="reaumur" name="temperatures" />
+            <label for="reaumur">Réaumur (°Re)</label>
+          </li>
+        </ul>
+      </div>
+
+      <!--Desired Converted unit of temperatures-->
+      <div class="containerConvertedTemp">
+        <h2>TO:</h2>
+
+        <ul>
+          <!--to Celsius-->
+          <li>
+            <input type="radio" id="toCelsius" name="temperaturesConverted" />
+            <label for="toCelsius">to Celsius (°C)</label>
+          </li>
+          <!--to Fahrenheit-->
+          <li>
+            <input
+              type="radio"
+              id="toFahrenheit"
+              name="temperaturesConverted"
+            />
+            <label for="toFahrenheit">to Fahrenheit (°F)</label>
+          </li>
+          <!--to Kevin-->
+          <li>
+            <input type="radio" id="toKelvin" name="temperaturesConverted" />
+            <label for="toKelvin">to Kelvin (K)</label>
+          </li>
+          <!--to Rankine-->
+          <li>
+            <input type="radio" id="toRankine" name="temperaturesConverted" />
+            <label for="toRankine">to Rankine (°R)</label>
+          </li>
+          <!--to Reaumur-->
+          <li>
+            <input type="radio" id="toReaumur" name="temperaturesConverted" />
+            <label for="toReaumur">to Réaumur (°Re)</label>
+          </li>
+        </ul>
+      </div>
+
+      <h2 id="result">RESULT:</h2>
+    </div>
+
+    <footer>
+      <h3>© 2024 Adrian Julius Villaruel. All rights reserved.</h3>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

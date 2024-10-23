@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url("./assets/tempConversionBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* HEADER AND FOOTER STYLING */
+header,
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 5px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgba(234, 168, 0, 0.923);
+}
+
+header img {
+  width: 50px;
+}
+
+header h2 {
+  padding: 0 5px;
+}
+
+/* TEMP CONVERSION CONTAINER */
+.tempConversionContainer {
+  margin: 5vh;
+  width: 60%;
+  padding: 20px 5vh;
+
+  text-align: center;
+  background: radial-gradient(
+    circle,
+    rgba(255, 243, 189, 0.566) 0%,
+    rgba(255, 209, 59, 0.756) 100%
+  );
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 12px black;
+}
+
+.tempConversionContainer h1 {
+  font-size: 2em;
+}
+
+.tempConversionContainer h2 {
+  font-size: 1.4em;
+  padding: 0 30px;
+}
+
+.tempConversionContainer p {
+  padding: 0 5%;
+  margin: 0;
+  color: brown;
+  font-size: 15px;
+}
+
+.tempConversionContainer input,
+label {
+  padding: 10px 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.tempConversionContainer input[type="number"] {
+  text-align: center;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.tempConversionContainer input[type="number"]:hover {
+  box-shadow: 0 0 3px black;
+  transition: transform 0.5s;
+}
+
+.tempConversionContainer input[type="number"]:focus {
+  transform: scale(1.03);
+  transition: transform 0.5s;
+}
+
+.tempConversionContainer button {
+  padding: 10px 15px;
+  margin-left: 2px;
+  margin-bottom: 10px;
+
+  font-size: 1.2em;
+  color: white;
+  background-color: rgba(203, 74, 27, 0.756);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tempConversionContainer button:hover {
+  background-color: rgb(222, 59, 0);
+  box-shadow: 0 0 3px black;
+}
+
+.tempConversionContainer button:active {
+  background-color: red;
+  box-shadow: 0 0 5px red;
+}
+
+.tempConversionContainer input[type="radio"] {
+  accent-color: red;
+  transform: scale(1.2);
+}
+
+label:hover {
+  color: white;
+  transition: font-size 0.2s, color 0.3s;
+}
+
+/*----- Styling of div containers of the units of temperatures -----*/
+.containerUserTemp,
+.containerConvertedTemp {
+  width: 50%;
+  height: 55%;
+  margin: 2em 0 0;
+
+  float: left;
+}
+
+.containerUserTemp > h2,
+.containerConvertedTemp > h2 {
+  margin: 0 10%;
+  text-align: left;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: justify;
+}
+
+ul li {
+  padding: 8px 5%;
+}
+
+/* ----- Responsive -----*/
+@media (max-width: 815px) {
+  .tempConversionContainer {
+        width: 70%; 
+    height: auto;
+    padding: 0 0 2%;
+  }
+
+  .containerUserTemp,
+  .containerConvertedTemp {
+    margin-bottom: 2.5vh;
+    height: auto;
+    padding: 0 4% 0;
+  }
+
+  .tempConversionContainer h1 {
+    margin-top: 1.5em;
+    font-size: 1.45em;
+  }
+  .tempConversionContainer h2 {
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
+
+  .tempConversionContainer p {
+    font-size: 12px;
+  }
+
+  .tempConversionContainer input,
+  label {
+    font-size: 1em;
+  }
+
+  label:hover {
+    font-size: 1.03em;
+  }
+
+  .tempConversionContainer button {
+    font-size: 0.8em;
+  }
+
+  ul li {
+    padding: 6px 5%;
+  }
+}
+
+@media (max-width: 730px) {
+  body {
+    height: auto;
+  }
+
+  .tempConversionContainer {
+    width: 75%; 
+    padding: 4%;
+  }
+
+  .containerUserTemp,
+  .containerConvertedTemp {
+    width: 100%;
+    margin-bottom: 1vh;
+  }
+
+  .tempConversionContainer h1 {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+  }
+
+  .tempConversionContainer input,
+  label {
+    padding: 10px 0;
+    font-size: 0.88em;
+  }
+
+  label:hover {
+    font-size: 0.91em;
+  }
+
+  .containerUserTemp > h2,
+  .containerConvertedTemp > h2 {
+    margin: 0 10%;
+    text-align: center;
+  }
+
+  ul li {
+    padding: 3px 5%;
+  }
+}
+
+@media (max-width: 400px) {
+  header img {
+    display: none;
+  }
+
+  .tempConversionContainer {
+
+    padding: 5px 3px 20px;
+  }
+
+  .tempConversionContainer input[type="number"] {
+    width: 45vw;
+  }
+}
